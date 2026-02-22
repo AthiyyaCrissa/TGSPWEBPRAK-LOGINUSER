@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --primary-color: #0D1936;
+    --primary-color: #5582ed;
     --secondary-color: #535354;
     --background-color: #EFEFEF;
     --shadow-color: rgba(0, 0, 0, 0.1);
@@ -29,23 +29,70 @@ a:hover{
     text-decoration: underline;
 }
 
+
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
     height: 100vh;
-    background-color: var(--background-color);
+    background: url('../../backgroundloginmadura.jpg.jpeg') no-repeat center center;
+    background-size: cover;
+
 }
 
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE */
+.left{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.overlay{
+    color: white;
+    text-align: left;
+    padding: 50px;
+}
+
+.overlay h2{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.overlay h1{
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.overlay p{
+    font-size: 16px;
+    max-width: 400px;
+}
+
+/* RIGHT SIDE */
+.right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
 .wrapper{
     position: relative;
     width: 430px;
     height: 500px;
-    background-color: var(--white-color);
+    background: rgba(255, 255, 255, 0.2);   
+    backdrop-filter: blur(15px);            
+    -webkit-backdrop-filter: blur(15px);    
     border-radius: 15px;
     padding: 120px 32px 64px;
-    border: 1px solid var(--primary-color);
-    box-shadow: 0 8px 15px var(--shadow-color);
+    border: 1px solid rgba(255,255,255,0.3); 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     transition: var(--transition-3s);
     overflow: hidden;
 }
@@ -70,7 +117,6 @@ body{
     top: 0;
     width: 30px;
     height: 30px;
-    background-color: red;
 }
 
 .form-header::before{
